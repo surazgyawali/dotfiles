@@ -1,0 +1,36 @@
+BT-headset-mode-on () {
+    sudo systemctl start bluetooth.service
+    echo -e "power on" | bluetoothctl
+    sleep 2
+    echo -e "connect AA:78:95:CF:71:C4" | bluetoothctl
+    sleep 2
+    sudo rmmod hid_multitouch
+    sudo modprobe hid_multitouch
+}
+
+pull-database-job-aid(){
+    adb -d shell "run-as np.com.surajgyawali.jobschedule cp databases/events_db /sdcard/events.db"
+    adb pull /sdcard/events.db ~/Desktop
+}
+
+alias cat='bat'
+alias dump='/mnt/dump'
+alias dcompose='docker-compose'
+alias iwmconfig='vim .config/i3/config'
+alias sctl='sudo systemctl'
+alias pm='sudo pacman'
+
+alias mpvTop40='mpv http://pureplay.cdnstream1.com/6025_64.aac/playlist.m3u8\?listeningSessionID\=5c42c96b8de0a17f_5105657_NnULwDQH_MTkyLjE1Mi4yMy4yNDM6ODA\!_00000015w3n\&downloadSessionID\=0\&listenerId\=2247482db1ae8312237dce775316768d\&aw_0_1st.playerid\=esPlayer\&aw_0_1st.skey\=1552986467'
+alias mpvHotHitz='mpv http://pureplay.cdnstream1.com/6027_64.aac/playlist.m3u8\?listeningSessionID\=5c83806c41b8ca68_963398_MXyxN8oH_MTkyLjE1Mi4yMy4yNDI6ODA\!_0000000eWM4\&downloadSessionID\=0\&listenerId\=9d599a602bb1b267af4ab87cdaddbfeb\&aw_0_1st.playerid\=esPlayer\&aw_0_1st.skey\=1553084890'
+alias mpvSmall='mpv --window-scale=.11'
+
+arch-rsync-pkg-cache () {
+  (( $# == 0 )) && {
+    echo "Usage:"
+    echo "  $ arch-rsync-pkg-cache user@ip [/path/to/cache/folder/] [/path/to/remote/cache/folder]"
+    return
+  }
+  pacman -Sup | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} http | xargs -n1 basename > /tmp/pkglst
+  wc -l /tmp/pkglst
+  sudo rsync -r --append --progress --files-from=/tmp/pkglst $1:${2:=/var/cache/pacman/pkg} ${3:=/var/cache/pacman/pkg}
+}
