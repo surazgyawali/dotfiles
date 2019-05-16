@@ -10,6 +10,8 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $mod_def "default"; exec --no-startup-id sh ~/.config/i3/red-screen.sh off;
+set $exec_red_screen exec --no-startup-id sh ~/.config/i3/red-screen.sh on;
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -160,12 +162,12 @@ mode "resize" {
         bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+        bindsym Return mode $mod_def
+        bindsym Escape mode $mod_def
+        bindsym $mod+r mode $mod_def
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize"; $exec_red_screen;
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -201,6 +203,8 @@ colors {
 	}
 }
 
+hide_edge_borders both
+
 bindsym Control+Shift+L exec betterlockscreen -l blur -t "Hello World!!"
 bindsym $mod+shift+x exec betterlockscreen -l blur -t "Hello World!!"
 # bindsym Control+Alt+Delete exec suspend
@@ -212,7 +216,7 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wall.jpg
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id xfce4-power-manager
 
-bindsym Mod1+Shift+v exec --no-startup-id xfce4-popup-clipman
+bindsym Mod1+Control+v exec --no-startup-id xfce4-popup-clipman
 bindsym --release Print exec --no-startup-id  import png:- | xclip -selection clipboard -t image/png
 bindsym --release Shift+Print exec --no-startup-id import  ~/Pictures/screen$(date '+%Y-%m-%d_%H_%M_%S').png
 
@@ -239,7 +243,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec ~/toggletouch.sh # toggle touchpad
+# bindsym XF86TouchpadToggle exec ~/toggletouch.sh # toggle touchpad
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
