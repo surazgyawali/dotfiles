@@ -66,7 +66,7 @@ URxvt*font: xft:DejaVu Sans Mono:style=Book:antialias=true:pixelsize=11,xft:Hack
 !! terminus names see end of file!
 
 URxvt.depth:                      32
-URxvt.background: [90]#272822
+URxvt.background: [70]#272822
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
