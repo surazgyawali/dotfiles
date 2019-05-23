@@ -1,15 +1,43 @@
+
 ! "Enabled modi" Set from: Default
-rofi.modi:                         run,window,drun,ssh,keys
+rofi.modi:                        combi,drun,run,window,ssh,keys
+
+! "Set the modi to combine in combi mode" Set from: Default
+rofi.combi-modi:                    drun,run,ssh,window
+
+! "Font to use" Set from: Default
+rofi.font:                           System San Francisco Display 10
+
+! "Border width" Set from: Default
+rofi.bw:                             0
+
+! "Desktop entry show actions." Set from: Default
+rofi.drun-show-actions:             true
+
+! "Use sorting" Set from: Default
+rofi.sort:                           false
+
+
+! "Enable auto select mode" Set from: Default
+!rofi.auto-select:                 true
+
+! "Fake transparency *DEPRECATED*" Set from: Default
+rofi.fake-transparency:             true
+
+
+! "New style theme file" Set from: Default
+rofi.theme: rootkit
+
+
+! "Hide the prefix mode prefix on the combi view." Set from: Default
+rofi.combi-hide-mode-prefix:        true 
+
 ! "Window width" Set from: Default
 ! rofi.width:                          50
 ! "Number of lines" Set from: Default
 ! rofi.lines:                          15
 ! "Number of columns" Set from: Default
 ! rofi.columns:                        1
-! "Font to use" Set from: Default
-rofi.font:                           System San Francisco Display 10
-! "Border width" Set from: Default
-rofi.bw:                             0
 ! "Location on screen" Set from: Default
 ! rofi.location:                       0
 ! "Padding" Set from: Default
@@ -42,14 +70,10 @@ rofi.bw:                             0
 ! rofi.icon-theme:
 ! "Desktop entry fields to match in drun" Set from: Default
 ! rofi.drun-match-fields:              name,generic,exec,categories
-! "Desktop entry show actions." Set from: Default
-rofi.drun-show-actions:             true
 ! "DRUN format string. (Supports: generic,name,comment,exec,categories)" Set from: Default
 ! rofi.drun-display-format:            {name} [<span weight='light' size='small'><i>({generic})</i></span>]
 ! "Disable history in run/ssh" Set from: Default
 ! rofi.disable-history:                false
-! "Use sorting" Set from: Default
-rofi.sort:                           false
 ! "Choose the strategy used for sorting: normal (levenshtein) or fzf." Set from: Default
 ! rofi.sorting-method:
 ! "Set case-sensitivity" Set from: Default
@@ -60,14 +84,10 @@ rofi.sort:                           false
 ! rofi.sidebar-mode:                   false
 ! "Row height (in chars)" Set from: Default
 ! rofi.eh:                             1
-! "Enable auto select mode" Set from: Default
-rofi.auto-select:                 true
 ! "Parse hosts file for ssh mode" Set from: Default
 ! rofi.parse-hosts:                    false
 ! "Parse known_hosts file for ssh mode" Set from: Default
 ! rofi.parse-known-hosts:              true
-! "Set the modi to combine in combi mode" Set from: Default
-! rofi.combi-modi:                     window,run
 ! "Set the matching algorithm. (normal, regex, glob, fuzzy)" Set from: Default
 ! rofi.matching:                       normal
 ! "Tokenize input string" Set from: Default
@@ -86,8 +106,6 @@ rofi.auto-select:                 true
 ! rofi.hide-scrollbar:                true
 ! "Fullscreen" Set from: Default
 ! rofi.fullscreen:                     false
-! "Fake transparency *DEPRECATED*" Set from: Default
-rofi.fake-transparency:             true
 ! "DPI" Set from: Default
 ! rofi.dpi:                            -1
 ! "Threads to use for string matching" Set from: Default
@@ -104,8 +122,6 @@ rofi.fake-transparency:             true
 ! rofi.click-to-exit:                  true
 ! "Indicate how it match by underlining it." Set from: Default
 ! rofi.show-match:                     true
-! "New style theme file" Set from: Default
-rofi.theme: rootkit
 ! "Color scheme for normal row" Set from: Default
 ! rofi.color-normal:
 ! "Color scheme for urgent row" Set from: Default
@@ -116,8 +132,6 @@ rofi.theme: rootkit
 ! rofi.color-window:
 ! "Max history size (WARNING: can cause slowdowns when set to high)." Set from: Default
 ! rofi.max-history-size:               25
-! "Hide the prefix mode prefix on the combi view." Set from: Default
-! rofi.combi-hide-mode-prefix:         false
 ! "Set the character used to negate the matching. ('\0' to disable)" Set from: Default
 ! rofi.matching-negate-char:           -
 ! "Pidfile location" Set from: Default

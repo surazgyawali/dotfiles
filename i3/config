@@ -100,6 +100,9 @@ bindsym $mod+backslash	workspace back_and_forth
 bindsym $mod+less workspace prev
 bindsym $mod+greater  workspace next
 
+bindsym $mod+Shift+greater  move container to workspace next
+bindsym $mod+Shift+less move container to workspace prev
+
 set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
@@ -221,10 +224,10 @@ bindsym --release Print exec --no-startup-id  import png:- | xclip -selection cl
 bindsym --release Shift+Print exec --no-startup-id import  ~/Pictures/screen$(date '+%Y-%m-%d_%H_%M_%S').png
 
 
-assign [class="Audacious"] $ws10
+#assign [class="Audacious"] $ws10
 assign [class="TelegramDesktop"] $ws8
 #assign [class="Google-chrome"] $ws3
-assign [class="Google-chrome"] $ws3
+#assign [class="Google-chrome"] $ws3
 #assign [class="Xfce4-terminal"] $ws9
 assign [class="Code"] $ws1
 
