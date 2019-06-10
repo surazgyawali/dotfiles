@@ -210,6 +210,7 @@ hide_edge_borders both
 
 bindsym Control+Shift+L exec betterlockscreen -l blur -t "Hello World!!"
 bindsym $mod+shift+x exec betterlockscreen -l blur -t "Hello World!!"
+bindsym XF86PowerOff exec betterlockscreen -l blur -t "Hello World!!"
 # bindsym Control+Alt+Delete exec suspend
 
 exec --no-startup-id compton -f
@@ -229,7 +230,7 @@ assign [class="TelegramDesktop"] $ws8
 #assign [class="Google-chrome"] $ws3
 #assign [class="Google-chrome"] $ws3
 #assign [class="Xfce4-terminal"] $ws9
-assign [class="Code"] $ws1
+#assign [class="Code"] $ws1
 
 #set $sink `pactl list short sinks | grep RUNNING | cut -f1`
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle

@@ -1,6 +1,6 @@
 
 ! "Enabled modi" Set from: Default
-rofi.modi:                        combi,drun,run,window,ssh,keys
+rofi.modi:                        combi,run,window,ssh,keys
 
 ! "Set the modi to combine in combi mode" Set from: Default
 rofi.combi-modi:                    drun,run,ssh,window
