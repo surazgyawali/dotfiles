@@ -111,6 +111,8 @@ source ~/.shellrc
 PATH=$PATH:/home/sz/.local/bin:/mnt/dump/android-studio/jre/bin
 
 PATH=$PATH:/mnt/dump/Android/Sdk/platform-tools
+PATH=~/.npm-global/bin:$PATH
+
 
 export TERM=xterm
 source /home/sz/dotfiles/network.sh
