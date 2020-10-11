@@ -219,7 +219,7 @@ bindsym $mod+shift+x exec betterlockscreen -l blur -t "Hello World!!"
 bindsym XF86PowerOff exec betterlockscreen -l blur -t "Hello World!!"
 # bindsym Control+Alt+Delete exec suspend
 
-exec --no-startup-id compton -f
+exec --no-startup-id picom
 exec --no-startup-id mpd
 exec --no-startup-id mpd-mpris
 exec --no-startup-id feh --bg-fill ~/Pictures/wall0.jpg
