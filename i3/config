@@ -214,9 +214,9 @@ colors {
 
 hide_edge_borders vertical
 
-bindsym Control+Shift+L exec betterlockscreen -l blur -t "Hello World!!"
-bindsym $mod+shift+x exec betterlockscreen -l blur -t "Hello World!!"
-bindsym XF86PowerOff exec betterlockscreen -l blur -t "Hello World!!"
+bindsym Control+Shift+L exec betterlockscreen -l dim -t "Hello World!!"
+bindsym $mod+shift+x exec betterlockscreen -l dim -t "Hello World!!"
+bindsym XF86PowerOff exec betterlockscreen -l dim -t "Hello World!!"
 # bindsym Control+Alt+Delete exec suspend
 
 exec --no-startup-id picom

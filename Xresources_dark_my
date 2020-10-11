@@ -1,3 +1,5 @@
+!Xresources_3024_dark
+
 Xft.dpi:       96
 Xft.antialias: true
 Xft.hinting:   true
@@ -6,53 +8,57 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background:        #222D31
-XTerm*foreground:        #d8d8d8
-XTerm*pointerColor:      #1ABB9B
+!XTerm*background:        #222D31
+!XTerm*foreground:        #d8d8d8
+!XTerm*pointerColor:      #1ABB9B
 XTerm*faceName:          Fixed
 XTerm*faceSize:          11
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
 
-*background: #272822
-*foreground: #f8f8f2
-*fading:                          8
-*fadeColor:                       black
-*cursorColor: #a6e22e
-*pointerColorBackground:          #2B2C2B
-*pointerColorForeground:          #16A085
+URxvt.fading:                          8
+URxvt.fadeColor:                       black
+! URxvt.cursorColor: #a6e22e
+URxvt.pointerColorBackground:          #2B2C2B
+URxvt.pointerColorForeground:          #16A085
 
-!! black dark/light
-*color0: #272822
-*color8: #4eab45
+! special
+! *.foreground:   #e8dfd6
+! *.background:   #021b21
+URxvt.cursorColor:  #e8dfd6
 
-!! red dark/light
-*color1: #f92672
-*color9: #f92672
+! black
+URxvt.color0:       #032c36
+URxvt.color8:       #065f73
 
-!! green dark/light
-*color2: #a6e22e
-*color10: #a6e22e
+! red
+URxvt.color1:       #c2454e
+URxvt.color9:       #ef5847
 
-!! yellow dark/light
-*color3: #f4bf75
-*color11: #f4bf75
+! green
+URxvt.color2:       #7cbf9e
+URxvt.color10:      #a2d9b1
 
-!! blue dark/light
-*color4: #66d9ef
-*color12: #66d9ef
+! yellow
+URxvt.color3:       #8a7a63
+URxvt.color11:      #beb090
 
-!! magenta dark/light
-*color5: #ae81ff
-*color13: #ae81ff
+! blue
+URxvt.color4:       #2e3340
+URxvt.color12:      #61778d
 
-!! cyan dark/light
-*color6: #a1efe4
-*color14: #a1efe4
+! magenta
+URxvt.color5:       #ff5879
+URxvt.color13:      #ff99a1
 
-!! white dark/light
-*color7: #f8f8f2
-*color15: #f9f8f5
+! cyan
+URxvt.color6:       #44b5b1
+URxvt.color14:      #9ed9d8
+
+! white
+URxvt.color7:       #f2f1b9
+URxvt.color15:      #f6f6c9
+
 
 Xcursor.theme: xcursor-breeze
 Xcursor.size:                     0
@@ -66,12 +72,12 @@ URxvt*font: xft:DejaVu Sans Mono:style=Book:antialias=true:pixelsize=11,xft:Hack
 !! terminus names see end of file!
 
 URxvt.depth:                      32
-URxvt.background: [70]#272822
+URxvt.background: [80]#021b21
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
-URxvt*background:                 black
-URxvt*foreground:                 grey
+URxvt*background:                 #021b21
+URxvt*foreground:                 #e8dfd6
 URxvt*saveLines:                  5000
 URxvt*internalBorder:             02
 

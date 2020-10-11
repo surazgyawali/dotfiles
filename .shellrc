@@ -1,3 +1,9 @@
+alias leftExtend='xrandr --output HDMI1 --auto --left-of eDP1'
+alias rightExtend='xrandr --output HDMI1 --auto --right-of eDP1'
+
+alias closeExtended='xrandr --output HDMI1 --auto'
+
+
 BT-headset-mode-on () {
     sudo systemctl start bluetooth.service
     echo -e "power on" | bluetoothctl
