@@ -219,12 +219,13 @@ bindsym $mod+shift+x exec betterlockscreen -l dim -t "Hello World!!"
 bindsym XF86PowerOff exec betterlockscreen -l dim -t "Hello World!!"
 # bindsym Control+Alt+Delete exec suspend
 
-exec --no-startup-id picom
 exec --no-startup-id mpd
 exec --no-startup-id mpd-mpris
 exec --no-startup-id feh --bg-fill ~/Pictures/wall0.jpg
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id xfce4-power-manager
+
+exec --no-startup-id picom -b --config ~/.config/picomp.conf
 
 #block touchpad for 1 sec while typing
 exec --no-startup-id syndaemon -i 1 -t -K -R -d
