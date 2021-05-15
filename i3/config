@@ -223,7 +223,11 @@ exec --no-startup-id mpd
 exec --no-startup-id mpd-mpris
 exec --no-startup-id feh --bg-fill ~/Pictures/wall0.jpg
 exec --no-startup-id xfce4-clipman
-exec --no-startup-id xfce4-power-manager
+
+exec --no-startup-id dunst
+exec --no-startup-id cbatticon -u 15 -c "sctl suspend"
+# notification for ac unplugged
+# exec --no-startup-id bash /home/sz/.config/ac_unplugged_notification.sh
 
 exec --no-startup-id picom -b --config ~/.config/picomp.conf
 
