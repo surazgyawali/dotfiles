@@ -1,0 +1,16 @@
+configuration {
+	modi: "combi,run,window,ssh,keys";
+	font: "System San Francisco Display 10";
+	bw: 0;
+	show-icons: false;
+	drun-show-actions: true;
+	sort: false;
+	sidebar-mode: false;
+	combi-modi: "drun,run,ssh,window";
+	fake-transparency: true;
+	theme: "rootkit";
+	combi-hide-mode-prefix: false;
+	display-window: "Window";
+	display-run: "Execute";
+	display-drun: "Activate";
+}
