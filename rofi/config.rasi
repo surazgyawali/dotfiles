@@ -8,9 +8,9 @@ configuration {
 	sidebar-mode: false;
 	combi-modi: "drun,run,ssh,window";
 	fake-transparency: true;
-	theme: "rootkit";
 	combi-hide-mode-prefix: false;
 	display-window: "Window";
 	display-run: "Execute";
 	display-drun: "Activate";
 }
+@theme "rootkit"
